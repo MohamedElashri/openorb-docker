@@ -29,7 +29,7 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ghcr.io/${{ github.repository_owner }}/openorb:latest
+        tags: ghcr.io/melashri/openorb:latest
 
     - name: Build and push additional tags
       if: startsWith(github.ref, 'refs/tags/')
@@ -38,4 +38,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ghcr.io/${{ github.repository_owner }}/openorb:${{ github.ref_name }}
+        tags: ghcr.io/melashri/openorb:${{ github.ref_name }}
